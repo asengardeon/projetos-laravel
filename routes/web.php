@@ -15,7 +15,7 @@ use App\Task;
 use Illuminate\Http\Request;
 
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -27,4 +27,4 @@ Route::delete('/task/{task}', 'TaskController@destroy');
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
